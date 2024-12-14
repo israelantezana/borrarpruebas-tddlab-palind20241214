@@ -14,17 +14,20 @@ describe("Palindromo", () => {
   it("palabra de un dos letras diferentes no es palindromo", () => {
     expect(palindromo("rn")).toEqual(false);
   });
+
+  /*it("palabra de un dos letras diferentes no es palindromo", () => {
+    expect(palindromo("ala")).toEqual(true);
+  });*/
 });
 
 function palindromo(palabra) {
-  let letras = palabra.split("");
-  if (letras.length === 1) {
-    return true;
+  if (palabra === "") {
+    return false;
   }
-  if (letras.length === 2) {
-    if (letras[0] === letras[1]) {
-      return true;
-    }
+
+  let inversa = palabra.split("").reverse().join("");
+  if (palabra === inversa) {
+    return true;
   }
   return false;
 }
