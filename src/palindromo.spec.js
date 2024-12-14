@@ -15,9 +15,9 @@ describe("Palindromo", () => {
     expect(palindromo("rn")).toEqual(false);
   });
 
-  /*it("palabra de un dos letras diferentes no es palindromo", () => {
+  it("palabra de un dos letras diferentes no es palindromo", () => {
     expect(palindromo("ala")).toEqual(true);
-  });*/
+  });
 });
 
 function palindromo(palabra) {
