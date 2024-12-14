@@ -17,6 +17,14 @@ describe("Palindromo", () => {
 });
 
 function palindromo(palabra) {
-  if (palabra === "") return false;
-  return true;
+  let letras = palabra.split("");
+  if (letras.length === 1) {
+    return true;
+  }
+  if (letras.length === 2) {
+    if (letras[0] === letras[1]) {
+      return true;
+    }
+  }
+  return false;
 }
