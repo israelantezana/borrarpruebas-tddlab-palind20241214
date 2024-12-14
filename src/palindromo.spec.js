@@ -10,6 +10,10 @@ describe("Palindromo", () => {
   it("palabra de un dos letras iguale es palindromo", () => {
     expect(palindromo("aa")).toEqual(true);
   });
+
+  it("palabra de un dos letras diferentes no es palindromo", () => {
+    expect(palindromo("rn")).toEqual(false);
+  });
 });
 
 function palindromo(palabra) {
