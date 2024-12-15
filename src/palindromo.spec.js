@@ -25,6 +25,10 @@ function palindromo(palabra) {
     return false;
   }
 
+  if (palabra.lenght > 30) {
+    return false;
+  }
+
   let inversa = palabra.split("").reverse().join("");
   if (palabra === inversa) {
     return true;
